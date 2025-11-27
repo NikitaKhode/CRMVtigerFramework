@@ -17,7 +17,7 @@ import com.vtiger.genericWebDriverUtility.UtilityClassObject;
 public class ListenerImpClass implements ISuiteListener, ITestListener{
 	public ExtentSparkReporter spark;
 	public ExtentReports report;
-	public static ExtentTest test;
+	public ExtentTest test;
 	public ITestResult result;
 	
 	@Override

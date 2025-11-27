@@ -4,23 +4,6 @@
   <listeners>
     <listener class-name="com.vtiger.generic.ListenerUtility.ListenerImpClass"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="Test-1(failed)">
-    <classes>
-      <class name="com.vtiger.documentsModule.CreateDocumentsTest">
-        <methods>
-          <include name="configBs"/>
-          <include name="login"/>
-          <include name="configAT"/>
-          <include name="configBT"/>
-          <include name="configAS"/>
-          <include name="lauchBrowser"/>
-          <include name="logout"/>
-          <include name="CreateDocumentsAssignedToGroup"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- com.vtiger.documentsModule.CreateDocumentsTest -->
-    </classes>
-  </test> <!-- Test-1(failed) -->
   <test thread-count="2" parallel="tests" name="Test-2(failed)">
     <classes>
       <class name="com.vtiger.contactsModule.CreateContactTest">
@@ -29,12 +12,13 @@
           <include name="configBs"/>
           <include name="login"/>
           <include name="configAT"/>
-          <include name="createContactWithSupportDateTest"/>
           <include name="configBT"/>
           <include name="configAS"/>
-          <include name="lauchBrowser"/>
+          <include name="createContactWithSupportDateTest"/>
           <include name="logout"/>
+          <include name="lauchBrowser"/>
           <include name="closeBrowser"/>
+          <include name="createContactWithOrganizationTest"/>
         </methods>
       </class> <!-- com.vtiger.contactsModule.CreateContactTest -->
     </classes>

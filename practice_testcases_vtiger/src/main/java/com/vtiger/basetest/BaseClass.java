@@ -21,8 +21,7 @@ import com.vtiger.objectRepositoryUtilities.HomePage;
 import com.vtiger.objectRepositoryUtilities.LoginPage;
 
 public class BaseClass {
-	public static WebDriver driver;
-	public static WebDriver sdriver;
+	public  WebDriver driver;
 	public PropertiesFileUtility putil=new PropertiesFileUtility();
 	public WebDriverUtility wutil=new WebDriverUtility();
 
