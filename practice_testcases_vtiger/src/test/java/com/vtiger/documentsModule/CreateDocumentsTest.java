@@ -28,18 +28,18 @@ public class CreateDocumentsTest extends BaseClass{
 		// Step 1: Login
 		
 		// Step 2: Click on Documents Module
-		HomePage hp = new HomePage(UtilityClassObject.getDriver());
+		HomePage hp = new HomePage(driver);
 		hp.getDocumentLink().click();
 		// Step 3: Click on create documents lookup icon
-		DocumentPage dp = new DocumentPage(UtilityClassObject.getDriver());
+		DocumentPage dp = new DocumentPage(driver);
 		dp.getCreateDocumentLookupIcon().click();
 		// Step 4: Enter Title
-		CreateNewDocumentPage cdp = new CreateNewDocumentPage(UtilityClassObject.getDriver());
+		CreateNewDocumentPage cdp = new CreateNewDocumentPage(driver);
 		cdp.getTitleTf().sendKeys(DOCNAME + randomNum);
 		// Step 5: Click on Save
 		cdp.getDocSaveBtn().click();
 		// Step 6: Verify Title
-		DocumentInformationPage dip = new DocumentInformationPage(UtilityClassObject.getDriver());
+		DocumentInformationPage dip = new DocumentInformationPage(driver);
 		String titleField = dip.getTitleTxtFld().getText();
 		Assert.assertEquals(titleField, DOCNAME + randomNum);
 		// logout
@@ -59,13 +59,13 @@ public class CreateDocumentsTest extends BaseClass{
 		// Step 1: Login
 	
 		// Step 2: Click on Documents Module
-		HomePage hp = new HomePage(UtilityClassObject.getDriver());
+		HomePage hp = new HomePage(driver);
 		hp.getDocumentLink().click();
 		// Step 3: Click on create documents lookup icon
-		DocumentPage dp = new DocumentPage(UtilityClassObject.getDriver());
+		DocumentPage dp = new DocumentPage(driver);
 		dp.getCreateDocumentLookupIcon().click();
 		// Step 4: Enter Title
-		CreateNewDocumentPage cdp = new CreateNewDocumentPage(UtilityClassObject.getDriver());
+		CreateNewDocumentPage cdp = new CreateNewDocumentPage(driver);
 		cdp.getTitleTf().sendKeys(DOCNAME + randomNum);
 		// Click on Groups radio button
 		cdp.getRadioBtn().click();
@@ -75,12 +75,12 @@ public class CreateDocumentsTest extends BaseClass{
 		// Step 5: Click on Save
 		cdp.getDocSaveBtn().click();
 		// Step 6: Verify Title
-		DocumentInformationPage dip = new DocumentInformationPage(UtilityClassObject.getDriver());
+		DocumentInformationPage dip = new DocumentInformationPage(driver);
 		String titleField = dip.getTitleTxtFld().getText();
 		Assert.assertEquals(titleField, DOCNAME + randomNum);
 
 		// Verify Assigned to Which Group
-		String actAssignedgrp = UtilityClassObject.getDriver().findElement(By.xpath("//a[text()='"+expectedAssignedgrp+"']")).getText();
+		String actAssignedgrp = driver.findElement(By.xpath("//a[text()='"+expectedAssignedgrp+"']")).getText();
 		Assert.assertEquals(actAssignedgrp, expectedAssignedgrp);
 		// logout
 	}

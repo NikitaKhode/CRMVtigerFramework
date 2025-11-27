@@ -58,6 +58,7 @@ public class BaseClass {
 		}
 	//	sdriver=driver;
 		UtilityClassObject.setDriver(driver);
+		driver=UtilityClassObject.getDriver();
 	}
 	@AfterClass(alwaysRun = true)
 	public void closeBrowser() {
