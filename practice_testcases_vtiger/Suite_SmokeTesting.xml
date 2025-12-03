@@ -6,6 +6,9 @@
 			<include name="smoke"></include>
 		</run>
 	</groups>
+<listeners>
+	<listener class-name="com.vtiger.generic.ListenerUtility.ListenerImpClass"></listener>
+</listeners>
   <test name="Test">
     <classes>
       <class name="com.vtiger.documentsModule.CreateDocumentsTest"/>
